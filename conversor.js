@@ -16,3 +16,10 @@ if (isNaN(amount) || amount <= 0) {
     document.getElementById('result').textContent = 'Por favor, insira um valor válido.';
     return;
 }
+// Conversão
+let convertedAmount;
+if (fromCurrency === toCurrency) {
+    convertedAmount = amount;
+} else {
+    convertedAmount = amount * exchangeRates[fromCurrency][toCurrency];
+}
